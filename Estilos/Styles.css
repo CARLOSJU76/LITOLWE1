@@ -65,7 +65,8 @@ body{
 .boton-barra{
     flex:1;
     background-color: transparent;
-    font-size: 125%;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
     margin:1px;
     cursor:pointer;
     transition: color 0.3s ease;
@@ -95,6 +96,7 @@ body{
     background-color: #820000;
     width:100%;
     color:white;
+    font-size: 1vw;
     height:15%;
     padding-top:1%;
     padding-bottom: 1%;
@@ -124,7 +126,7 @@ body{
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 3em;
+    font-size: 3vw;
     padding: 0 10px;
     cursor: pointer;
     user-select: none;
