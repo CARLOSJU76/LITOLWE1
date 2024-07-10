@@ -12,19 +12,34 @@
     <div class="form-container">
     <h2>Formularios de Registro</h2>
     <form id="registro">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id=" username" name= "username" required>
+        <div id="perfil">
+            <label for="Deportista" class="label-radio">Deportista</label>
+            <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>
+            <label for="Entrenador" class="label-radio">Entrenador</label>
+            <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>
+            <label for="Dirigente" class="label-radio">Dirigente</label>
+            <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>
+        </div>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
+        <hr class="divisor">
+        
+       
+        <input type="text" id=" username" name= "username" required placeholder="Nombre de usuario">
+        <label for="username" id="usuario">Digita un nombre de usuario</label>
 
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password"required>
+        
+        <input type="email" id="email" name="email" required placeholder="Email">
+        <label for="email" id="email">Escribe tu dirección E-mail</label>
 
-        <label for="confirm-pass">Confirmar Contraseña</label>
-        <input type="password" id="confirm-pass" name="confirm-pass" required>
+        
+        <input type="password" id="password" name="password"required placeholder="Digita una contraseña">
+        <label for="password" id="password">Ingresa 6 o más caracteres!!</label>
 
-        <button type="submit">Registrarse</button>
+        
+        <input type="password" id="confirm-pass" name="confirm-pass" required placeholder="Confirma tu contraseña">
+        <label for="confirm-pass" id="confirmar">Confirma tu contraseña</label>
+
+        <button type="submit"  id="submit">Registrarse</button>
     </form>
     </div>    
 
