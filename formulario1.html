@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Estilos/ranking_styles.css">   
     <link rel="stylesheet" href="Estilos/registro.css">
+    
     <script src="JS/sobrepuestos.js"></script>
 
     <title>Rankings</title>
 </head>
 <body>
+    <!--Barra superior-->
     <div class="titulo"><h2>Bienvenido a Rankings!!</h2></div>
     <div id="barra">
         
             <a href="index.html" class="boton-barra"><buttom><h3>Inicio</h3></buttom></a>        
             <a href="rankings" class="boton-barra"><buttom ><h3>Ver Rankings</h3></buttom></a>
-            <a href="log in" class="boton-barra"><buttom ><h3>Log in</h3></buttom ></a>
+            <a href="log in" class="boton-barra" id="open-dialog1"><buttom ><h3>Log in</h3></buttom ></a>
             <a href="#" class="boton-barra" id="open-dialog"><buttom ><h3>Sign up</h3></buttom ></a>
         
     </div>
@@ -25,7 +27,7 @@
        
    
         <form id="registro">
-            <div id="cerrar"> <a href="#" id="close-dialog">X</a></div>
+            <div id="cerrar"> <a href="#"  class="close-dialog" id="close-dialog">X</a></div>
            
             <h2>Formularios de Registro</h2>
             <div id="perfil">
@@ -61,7 +63,28 @@
             
         </form>
     </div>    
-   
+    <!--Formulario de login-->
+    <div class="login-container" id="dialog-overlay1" >
+
+        <div id="contenedor-login">
+            <div id="cerrar"> <a href="#" class="close-dialog" class="close-dialog" id="close-dialog1">X</a></div>
+
+            <h2>Log in</h2>
+
+            <input type="text" id="username" name= "username" required placeholder="Nombre de usuario">
+            <label for="username" class="username">Digita tu usuario o  Email</label>
+    
+            <input type="password" id="password" name="password"required placeholder="Digita una contraseña">
+            <label for="password" class="password" >Ingresa tu contraseña!!</label>
+
+            <a href="sidebar.html" id="a-button"><button type="submit"  id="submit">Submit</button></a> 
+
+            <a href="sidebar.html" id="olvidaste">Olvidaste tu contraseña</a>
+       
+        </div>
+    
+    </div>    
+
 
     
     

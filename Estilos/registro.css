@@ -9,6 +9,7 @@ html, body{
     height:100%;
 }
 
+
 #registro{
     display: flex;
     flex-direction: column;
@@ -126,7 +127,7 @@ input, button{
     align-items: end;
     width: 100%;
 }
-#close-dialog{
+.close-dialog{
     margin-right: 5%;
     margin-top:2%;
     background-color: #ffd700;
