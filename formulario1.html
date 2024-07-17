@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Estilos/ranking_styles.css">
-    <script src="/JS/javas.js"></script>
+    <link rel="stylesheet" href="/Estilos/ranking_styles.css">   
+    <link rel="stylesheet" href="Estilos/registro.css">
+    <script src="JS/sobrepuestos.js"></script>
 
     <title>Rankings</title>
 </head>
@@ -15,9 +16,55 @@
             <a href="index.html" class="boton-barra"><buttom><h3>Inicio</h3></buttom></a>        
             <a href="rankings" class="boton-barra"><buttom ><h3>Ver Rankings</h3></buttom></a>
             <a href="log in" class="boton-barra"><buttom ><h3>Log in</h3></buttom ></a>
-            <a href="log in" class="boton-barra"><buttom ><h3>Sign up</h3></buttom ></a>
+            <a href="#" class="boton-barra" id="open-dialog"><buttom ><h3>Sign up</h3></buttom ></a>
         
     </div>
+    <!--Formulario de REGISTRO-->
+
+    <div class="form-container" id="dialog-overlay" >
+       
+   
+        <form id="registro">
+            <div id="cerrar"> <a href="#" id="close-dialog">X</a></div>
+           
+            <h2>Formularios de Registro</h2>
+            <div id="perfil">
+                <label for="Deportista" class="label-radio">Deportista</label>
+                <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>
+                <label for="Entrenador" class="label-radio">Entrenador</label>
+                <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>
+                <label for="Dirigente" class="label-radio">Dirigente</label>
+                <div class="radio2"><input type="radio" id="radio1" name="radio1"  value="valor1"></div>            
+             </div>
+             <label class="elige-p">Elige tú perfil!!</label>
+
+      
+        
+       
+            <input type="text" id="username" name= "username" required placeholder="Nombre de usuario">
+             <label for="username" class="username">Digita un nombre de usuario</label>
+
+        
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <label for="email" class="email">Escribe tu dirección E-mail</label>
+
+        
+            <input type="password" id="password" name="password"required placeholder="Digita una contraseña">
+            <label for="password" class="password" >Ingresa 6 o más caracteres!!</label>
+
+        
+            <input type="password" id="confirm-pass" name="confirm-pass" required placeholder="Confirma tu contraseña">
+            <label for="confirm-pass" class="confirm-pass">Confirma tu contraseña</label>
+
+            <a href="sidebar.html" id="a-button"><button type="submit"  id="submit">Regístrate</button></a>
+            
+            
+        </form>
+    </div>    
+   
+
+    
     
 </body>
 </html>
+
