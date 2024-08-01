@@ -29,3 +29,8 @@ showSlide(slideIndex);
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(slideIndex);
 });
+
+
+const interval = 3000; // Intervalo en milisegundos
+
+setInterval(nextSlide, interval);
