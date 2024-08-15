@@ -1,0 +1,7 @@
+input{
+    display:none;
+    visibility:hidden;
+    -webkit-appearance: none; /* Eliminar el estilo predeterminado en Chrome y Safari */
+    -moz-appearance: none;    /* Eliminar el estilo predeterminado en Firefox */
+    appearance: none; 
+}
