@@ -3,46 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos/Styles.css">
-    <script src="JS/javas.js"></script>
-    <title>Liga Tolimense de Lucha</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/stylos.css">
+    <title>Document</title>
 </head>
 <body>
-    <div id="contenedor-general">
-        <!-- Sección de logo y barra -->
-        <div id="logo">
-            <img src="IMAGENES/icono-de-favoritos.png" id="img-logo">
-            <div id="barra">
-                <a href="sidebar.html" id="anchor-boton"><button class="boton-barra">Inicio</button></a>
-                <a href="sidebar.html" id="anchor-boton"><button class="boton-barra">Calendarios</button></a>
-                <a href="sidebar.html" id="anchor-boton"><button class="boton-barra">Plataforma</button></a>
-                <a href="formulario1.html" id="anchor-boton"><button class="boton-barra">Ranking Local</button></a>
-    
+<div id="contenedor-general">
+    <!-- En este punto comienza la barra creada con bootstrap -->
+    <div class="container" id="container">
+        <div id="div-x">
+            <img src="IMG/icono-de-favoritos.png" id="imagen-x">
+            <button id="toggleButton">Mostrar/Ocultar</button>
+        </div>
+        <div class="row" id="toggleElement">
+            <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
+                <img src="IMG/icono-de-favoritos.png" id="img-icon">                
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
+                <a href="sidebar.html" id="anchor-boton"><button id="boton-barra" >Inicio</button></a>
+            </div>      
+            
+            <div class="col-sm-6 col-md-4 col-lg-2" id="filas">
+                <a href="sidebar.html" id="anchor-boton"><button id="boton-barra" >Calendarios</button></a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2" id="filas">
+                <a href="sidebar.html" id="anchor-boton"><button id="boton-barra" >Plataforma</button></a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
+                <a href="formulario1.html" id="anchor-boton"><button id="boton-barra">Ranking Local</button></a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
+                <a href="formulario1.html" id="anchor-boton"><button id="boton-barra" >Sign UP/Login</button></a>
             </div>
         </div>
-        <!-- Sección de titulo -->
-        <div id="liga"><h1>LIGA TOLIMENSE DE LUCHA OLIMPICA</h1></div>
-        <!-- seccion de slider -->
-        <div class="slider">            
-                <div class="slide">
-                    <img src="IMAGENES/Imagen1.png" alt="imagen1" id="imagen-img">
-                    <button class="prev"onclick="prevSlide()">&#10094</button>
-                    <button class="next"onclick="nextSlide()">&#10095</button>
-                </div>
-                <div class="slide">
-                    <img src="IMAGENES/Imagen2.jpg" alt="imagen2" id="imagen-img">
-                    <button class="prev"onclick="prevSlide()">&#10094</button>
-                    <button class="next"onclick="nextSlide()">&#10095</button>
-                </div>
-                <div class="slide">
-                    <img src="IMAGENES/Imagen3.jpg" alt="imagen3" id="imagen-img">
-                    <button class="prev"onclick="prevSlide()">&#10094</button>
-                    <button class="next"onclick="nextSlide()">&#10095</button>
-                </div>         
-        </div>
-        
-    </div>
 
+        
+        </div>
     
+    
+
+    <label id="liga">LIGA TOLIMENSE DE LUCHA OLIMPICA</label>
+
+    <!-- Sección de slider -->
+    <div class="slider">            
+        <div class="slide">
+            <img src="IMG/Imagen1.png" alt="imagen1" id="imagen-img">
+            <button class="prev"onclick="prevSlide()">&#10094</button>
+            <button class="next"onclick="nextSlide()">&#10095</button>
+        </div>
+        <div class="slide">
+            <img src="IMG/Imagen2.jpg" alt="imagen2" id="imagen-img">
+            <button class="prev"onclick="prevSlide()">&#10094</button>
+            <button class="next"onclick="nextSlide()">&#10095</button>
+        </div>
+        <div class="slide">
+            <img src="IMG/Imagen3.jpg" alt="imagen3" id="imagen-img">
+            <button class="prev"onclick="prevSlide()">&#10094</button>
+            <button class="next"onclick="nextSlide()">&#10095</button>
+        </div>         
+    </div>
+</div>
+
+    <script src="JS/javas.js"></script>
+    <script src="JS/bootstrap.bundle.js"></script>
 </body>
 </html>

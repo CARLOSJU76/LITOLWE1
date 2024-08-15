@@ -34,3 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const interval = 3000; // Intervalo en milisegundos
 
 setInterval(nextSlide, interval);
+
+//función para alternar visibilidad de la barra  con el botón:
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggleButton');
+    const toggleElement = document.getElementById('toggleElement');
+
+    toggleButton.addEventListener('click', () => {
+        // Alternar la clase 'mostrar'
+        if (toggleElement.classList.contains('mostrar')) {
+            toggleElement.classList.remove('mostrar');
+        } else {
+            toggleElement.classList.add('mostrar');
+        }
+    });
+});
