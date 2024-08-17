@@ -27,8 +27,8 @@ body{
     display: none;
 }
 
-#filas{
-    height: 100px;
+#filas, #filas1{
+    height:6vw;
     position:relative;
     text-align: center;
     background-color:transparent;
@@ -85,10 +85,10 @@ body{
    align-items: center;
    background-color: #820000;
     color: gold;
-    height: 140px;
+    height: auto;
     padding:2px;
     text-align: left;
-    font-size:2vw;
+    font-size:2vh;
     width: 100%;
     
 }
@@ -96,49 +96,133 @@ body{
 
 @media (max-width: 992px) {
     #boton-barra {
-        font-size: 2.5vh;
+        font-size: 1.7vh;
+    }
+    #filas{
+        height: 8vw;
     }
     #liga{
-        display: flex;
+        display: inline-block;        
         align-items: center;
         text-align: center;
+        height: auto;
+        font-size: 1.7vh;
     }
 }
 @media (max-width: 768px) {
-    /*Esta es la parte de la barra: */   
-   
-
-
+    /*Esta es la parte de la barra: */ 
     #boton-barra {
-        font-size: 2vh;
+        font-size: 3vw;
     }
     #filas{
-        height: 60px;
+        height: 8vw;
     }
     #liga{
-        font-size:2.3vh;
+        display: inline-block;
+        font-size:30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 @media (max-width: 596px) {
-        #img-icon{
-        display: none;
+        #filas1{
+            display:none;
         }
+        
          #div-x{
             display:flex;
             justify-content: space-around;        
-            height: 60px;
+            height: 15vw;
             width: 100%;        
             top:0;
             padding:0;
             margin:0;            
-            background-color: #FFDF00;
+            
         }
-        #imagen-x, #toggleButton{
+
+        #imagen-x{
          display: block;
             height:100%;
          width: auto;
         }
+        #etiqueta{
+            display:flex;
+            background-color:transparent;
+            padding:0;
+            margin:0;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+        /*Todo lo referente al botón toggle: */
+        input{
+            display: none;
+            visibility:hidden;
+            -webkit-appearance: none; /* Elimina el estilo nativo en navegadores WebKit */
+            -moz-appearance: none;    /* Elimina el estilo nativo en Firefox */
+            appearance: none;         /* Elimina el estilo nativo en navegadores modernos */
+        }
+        .toggle{
+            position:relative;
+            height:80%;
+            aspect-ratio: 1/1;
+            z-index:1;
+            
+            cursor:pointer;
+            border-radius: 5px;
+            background-color:#660000;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            
+        }
+        .toggle .common{
+            position:absolute;
+            height: 0.7vw;
+            width: 10vw;
+            background-color: gold;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        
+        }
+        .toggle .top_line{
+            top:30%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        
+        }
+        .toggle .middle_line{
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        .toggle .bottom_line{
+            top:70%;
+            left:50%;
+            transform: translate(-50%,-50%);    
+        }
+        input:checked ~ .toggle .top_line{
+            left:2%;
+            top:50%;
+            width: 12vw;
+            transform:rotate(45deg);
+            padding:0;
+        }
+        input:checked ~ .toggle .bottom_line{
+            left: 2%;
+            top:50%;
+            width: 12vw;
+            transform:rotate(-45deg);
+        }
+        input:checked ~ .toggle .middle_line{
+            left: 2%;
+            top:50%;
+            width: 8vw;
+            transform: translateX(12vw);
+        }
+        
 
         .row {
             display: none; /* Oculta el elemento dentro del media query */
@@ -151,8 +235,18 @@ body{
             justify-content: flex-start;
             padding-top:0;
             margin-top: 0;
+           
+          
         }
-
+        #filas{
+            border:0.5px solid black;
+            border-radius:10px;
+            margin:1px;
+        }
+        #liga{
+            margin-top:1px;
+            margin-bottom: 1px;
+        }
 
     #boton-barra {
         font-size: 2vh;
