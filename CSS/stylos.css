@@ -170,13 +170,15 @@ body{
             height:80%;
             aspect-ratio: 1/1;
             z-index:1;
+
             
             cursor:pointer;
+            box-shadow: 4px 6px 8px #00000045; /* Sombra del botón */
             border-radius: 5px;
-            background-color:#660000;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            background-color:#660000;          
             
         }
+        
         .toggle .common{
             position:absolute;
             height: 0.7vw;
