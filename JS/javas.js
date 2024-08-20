@@ -49,3 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.getElementById('boton1').addEventListener('change', function() {
+    var contenedorSecundario = document.querySelector('.sidebar1');
+    contenedorSecundario.classList.toggle('deslizar'); // Alterna la clase para aplicar la transformación
+    
+});
