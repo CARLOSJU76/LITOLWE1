@@ -1,4 +1,4 @@
-
+//listarClase();
 //Función para el select Inicio/Regisro: 
 let sign_log=document.getElementById("opcion_uno");
 sign_log.addEventListener('change', function(){
@@ -19,9 +19,6 @@ sign_log.addEventListener('change', function(){
             if(elemento.className=="div_contenedor_SIGNUP"){
                 elemento.className="opciones_inactivas";
             }
-    }else{
-       elemento.className="opciones_inactivas";
-        elemento1.className="opciones_inactivas";
     }
 });
 //Función para el botón cerrar del formulario de Registro:
@@ -42,5 +39,10 @@ cerrarLogin.addEventListener('click', function(){
        
         elemento1.className="opciones_inactivas";
 });
-
+//Función que proporciona en una alert la lista de elementos que tienen la clase 'opciones_inactivas'.
+function listarClase(){
+    let elementos= document.querySelectorAll('.opciones_activas');
+    const ids = Array.from(elementos).map(elemento => elemento.id);//'Array.from':selecciona elementos; map: crea el nuevo array y hace el mismo efecto de foreach.
+    alert(ids);
+}
 

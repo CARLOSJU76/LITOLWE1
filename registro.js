@@ -12,7 +12,6 @@ document.getElementById('formulario_SIGNUP').addEventListener('submit', function
 
         method: 'POST',
         body: FD
-
     })
     .then( respuesta =>respuesta.json())
     .then(datos => {
@@ -27,10 +26,6 @@ document.getElementById('formulario_SIGNUP').addEventListener('submit', function
         cerrarSign.click();
         setTimeout(() =>{
             location.reload();
-        }, 3000);
-       
-    })
-
-      
-    
+        }, 3000);      
+    })   
 });
