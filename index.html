@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/stylos.css">
-    <link rel="stylesheet" href="CSS/stylos_sidebar.css"></link>
+    <link rel="stylesheet" href="CSS/stylos_sidebar.css">
+    <link rel="stylesheet" href="CSS/registro.css">
+    <link rel="stylesheet" href="CSS/login.css">
+
     <title> TOLIMA'S WRESTLING LEAGUE  </title>
 </head>
 <body>
+
 <div id="contenedor-general">
     <!-- En este punto comienza la barra creada con bootstrap -->
+    <!-- ======================================================================================= -->
 
-    
     <div class="container" id="container">
+    <!--Imagen de Icono Inicial  -->
+    <!-- ======================================================================================= -->
         <div id="div-x">
             <img src="IMG/icono-de-favoritos.png" id="imagen-x">
             <label id="etiqueta">
@@ -24,18 +30,19 @@
                     <span class="bottom_line common"></span>
                 </div>
             </label>
-            
-            
         </div>
+    <!-- Imagen de Icono responsivo para pantallas menores -->
+    <!-- ======================================================================================= -->
         <div class="row" id="toggleElement">
             <div class="col-sm-6 col-md-4 col-lg-2"  id="filas1">
-                <img src="IMG/icono-de-favoritos.png" id="img-icon">                
+                <img src="IMG/icono-de-favoritos.png" id="img-icon">
             </div>
-
+    <!-- Botones de la barrra -->
+    <!--======================================================================================== -->
             <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
                 <a href="sidebar.html" id="anchor-boton"><button id="boton-barra" >Inicio</button></a>
-            </div>      
-            
+            </div>
+
             <div class="col-sm-6 col-md-4 col-lg-2" id="filas">
                 <a href="sidebar.html" id="anchor-boton"><button id="boton-barra" >Calendarios</button></a>
             </div>
@@ -45,44 +52,41 @@
             <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
                 <a href="formulario1.html" id="anchor-boton"><button id="boton-barra">Ranking Local</button></a>
             </div>
+            <!--Botones signup y login  /  Elegir opciones-->
+<!-- =============================================================================================== -->
+
             <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
                 <div id="signup">
-                    <a href="formulario1.html" id="anchor-boton"><button id="boton-barra" >Sign UP/Login</button> </a>
-                    <label class="label_sidebar">
-
-                        <input type="checkbox" id="boton1">
-                    <div class="boton1">
-                        <span class="linea1 comun"></span>
-                        <span class="linea2 comun"></span>
-                        <span class="linea3 comun"></span>
-                    </div>     
-                    <div class="sidebar1"> 
-                        <h2>Opciones</h2>
-                        <ul>
-                            <li><a id="vinculo" href="#">Habilitar Deportista</a></li>
-                            <li><a id="vinculo" href="#">Incluir Datos</a></li>
-                            <li><a id="vinculo" href="#">Consultar estadísticas</a></li>
-                            <li><a id="vinculo" href="#">Cerrar</a></li>                
-                        </ul>                
-                    </div>           
-                        
-                    </label>
+                    <form name="sesion_off" id="sesion_off" class="formulario_sesion_activo">
+                        <select name="opcion_uno" id="opcion_uno" class="opciones_activas" >
+                            <option value="3" disabled selected>Inicio/Registro</option>
+                            <option value="1">Registrate</option>
+                            <option value="2">Inicia Sesión</option>
+                        </select>
+                    </form>
+                    <form name="sesion_on" id="sesion_on" class="opciones_inactivas">
+                        <select name="opcion_dos" id="opciones_inactivas" >
+                            <option value="" disabled selected>Elige una opción</option>
+                            <option value="1">Sumar</option>
+                            <option value="2">Restar</option>
+                            <option value="3">Multiplicar</option>
+                            <option value="4">Dividir</option>
+                        </select>
+                    </form>
                 </div>
-                
-                    
-                    
             </div>
         </div>
 
-        
-        </div>
-    
-    
+
+    </div>
+
+
 
     <label id="liga">LIGA TOLIMENSE DE LUCHA OLIMPICA</label>
 
     <!-- Sección de slider -->
-    <div class="slider">            
+     <!-- ========================================================================================= -->
+    <div class="slider">
         <div class="slide">
             <img src="IMG/Imagen1.png" alt="imagen1" id="imagen-img">
             <button class="prev"onclick="prevSlide()">&#10094</button>
@@ -97,25 +101,81 @@
             <img src="IMG/Imagen3.jpg" alt="imagen3" id="imagen-img">
             <button class="prev"onclick="prevSlide()">&#10094</button>
             <button class="next"onclick="nextSlide()">&#10095</button>
-        </div>         
+        </div>
     </div>
 </div>
+<!-- FORMULARIO LOGIN -->
+ <!-- ====================================================================================================================== -->
+<div id="contenedor_LOGIN" >
+
+    <form id="formulario_LOGIN">
+
+            <div id="div_cerrar_LOGIN"><div  id="cerrar_LOGIN">X</div></div>
+
+            <h2 id="titulo_LOGIN">Inicio de Sesión</h2>
+
+            <input type="text" id="usuario"class="elementos_LOGIN"  name= "usuario" required placeholder="Nombre de usuario">
+            <label for="usuario" id="label_usuario" class="elementos_LOGIN">Digita tu usuario o  Email</label>
+
+            <input type="password" class="elementos_LOGIN" id="passw" name="passw"required placeholder="Digita tu contraseña">
+            <label for="passw"class="elementos_LOGIN" id="label_passw" >Ingresa tu contraseña!!</label>
+
+            <input type="submit" id="boton_LOGIN"name="boton_LOGIN" value="Iniciar Sesión">
+            <!-- Para seguir mejorando: "olvidaste tu contraseña??" -->
+            <div id="mensaje_LOGIN" class="" ></div>
+            <a href="sidebar.html" class="elementos_LOGIN"id="olvidaste" style="text-align: center; ">Olvidaste tu contraseña?</a>
+    </form>
+    
+
+</div>
+<!-- FORMULARIO SIGN UP  -->
+ <!--========================================================================================================================= -->
+ <div id="div_contenedor_SIGNUP" >
+
+
+    <form id="formulario_SIGNUP" action="./registroLTL.php" method="POST" >
+        <div id="cerrar_SIGNUP" >X</div>
+
+        <h2 id="titulo_SIGNUP">Formularios de Registro</h2>
+
+        <input type="text" id="username" name= "username" required placeholder="Nombre de usuario">
+         <label for="username" class="username">Digita un nombre de usuario</label>
+
+
+        <input type="email" id="email" name="email" required placeholder="Email">
+        <label for="email" class="email">Escribe tu dirección E-mail</label>
+
+
+        <input type="password" id="password" name="password"required placeholder="Digita una contraseña">
+        <label for="password" class="password" >Ingresa 6 o más caracteres!!</label>
+
+
+        <input type="password" id="confirmacion" name="confirmacion" required  placeholder="Confirma tu contraseña">
+        <label for="confirmacion" class="confirmacion">Debes digitar el mismo valor del campo anterior</label>
+
+        <input type="submit"  id="boton_SIGNUP" name="boton_SIGNUP" value="Registrate">       
+
+    </form>
+    
+</div>
+<div id="mensaje_SIGNUP" class=""></div>
 
 
 
-
-    <script src="JS/javas.js"></script>
+    <script src="JS/slide.js"></script>
+    <script src="JS/activo_inactivo.js"></script>
+    <script src="registro.js"></script>
     <script src="JS/bootstrap.bundle.js"></script>
 </body>
 </html>
 
-<!-- <div class="sidebar1"> 
+<!-- <div class="sidebar1">
     <h2>Opciones</h2>
     <ul>
         <li><a href="#">Habilitar Deportista</a></li>
         <li><a href="#">Incluir Datos</a></li>
         <li><a href="#">Consultar estadísticas</a></li>
-        <li><a href="#">Cerrar</a></li>                
+        <li><a href="#">Cerrar</a></li>
     </ul>
 
 </div>
