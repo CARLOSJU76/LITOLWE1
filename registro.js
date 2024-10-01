@@ -24,6 +24,7 @@ document.getElementById('formulario_SIGNUP').addEventListener('submit', function
                       
         } 
         cerrarSign.click();
+        
         setTimeout(() =>{
             location.reload();
         }, 3000);      

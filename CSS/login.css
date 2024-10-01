@@ -84,8 +84,7 @@ body{
 }
 
 .elementos_LOGIN{
-    grid-column: 2/8;
-    color: gold;
+    grid-column: 2/8;    
     border-radius: 5px;
     font-family:'Courier New', Courier, monospace;
     font-size:1vw;
@@ -93,16 +92,20 @@ body{
 #usuario{
     grid-row:2/3;
     margin-top: 1%;
+    color:#4A0D0D;
 }
 #label_usuario{
     grid-row: 3;
+    color: gold;
 }
 #passw{
     grid-row:4/5;
     margin-top: 1%;
+    color:#4A0D0D;
 }
 #label_passw{
     grid-row:5;
+    color: gold;
 }
 
 #boton_LOGIN{
