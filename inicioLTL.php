@@ -5,8 +5,10 @@
     $passw=$_POST["passw"];
 
     $conexion= conexion();
-    $opcion= verificar($conexion, $usuario, $passw);
-    notificar($opcion);
+    $array= verificar($conexion, $usuario, $passw);
+    $opcion=$array[0];
+    $user1=$array[1];
+    notificar($opcion, $user1);
     $conexion->close();  
 
 
@@ -33,6 +35,7 @@ function conexion(){
 
 //FUNCIÓN PARA VERIFICAR COINCIDENCIA DE USUARIO:
 function verificar($conexion, $usuario, $passw ){
+    $datos=[];
     $consulta= $conexion->prepare("SELECT passw, usuario from usuarios where usuario=? or email=? ");
     $consulta->bind_param("ss", $usuario, $usuario);
     $consulta->execute();
@@ -46,14 +49,18 @@ function verificar($conexion, $usuario, $passw ){
     }else{
         $opcion=-1;
     }
+
+    array_push($datos, $opcion, $user1);
+    return $datos;
     $consulta->close();
-    return $opcion;
+    
 }
 
 //FUNICIÓN PARA TRNASMITIR EL MENSAJE JSON :
-function notificar($opcion){
+function notificar($opcion, $user1){
+
     if($opcion===1){
-        echo json_encode(array("status" =>"success", "message"=>"Bienvenido, iniciaste sesión exitosamente."));
+        echo json_encode(array("status" =>"success", "message"=>"Bienvenido $user1, iniciaste sesión exitosamente.", "nombre"=> $user1));
         //echo "Inicio de sesión exitoso.";
     }else if($opcion===0){
         echo json_encode(array("status" =>"error", "message"=>" Credenciales inválidas."));

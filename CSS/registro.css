@@ -132,3 +132,14 @@ html, body{
     border: solid #3E0D0D 3px; 
 
 }
+#saludoInicial{
+    position: fixed;
+    display: block;
+    top: 2px;
+    right: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8vw;
+    font-style: italic;
+    border-radius: 6px;
+    z-index:4;
+}
