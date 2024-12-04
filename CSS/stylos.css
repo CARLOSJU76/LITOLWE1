@@ -43,7 +43,7 @@ body{
 }
 .container{
     
-    background-color: gold;    
+    background-color: white;    
     width: 100%;
     max-width: none;
     margin: 0;
@@ -70,7 +70,7 @@ body{
 }
 #boton-barra:hover, .formulario_sesion_activo:hover, .opciones_activas:hover {
     color:#660000; /* Color del texto al pasar el cursor */
-    background-color: #FFDF00; /* Fondo al pasar el cursor */
+    background-color:#FAFBFD; /* Fondo al pasar el cursor */
     box-shadow: 4px 6px 8px #00000045; /* Sombra más pronunciada al pasar el cursor */
     transform: scale(1.05);
     border-radius: 15px;
@@ -85,7 +85,7 @@ body{
    display: inline-block;
    align-items: center;
    background-color: #820000;
-    color: gold;
+    color: #FAFBFD;
     height: auto;
     padding:2px;
     text-align: left;
@@ -481,7 +481,7 @@ body{
     height: 100%;
     width: 100%;
     border: none;
-    background-color: gold;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5vw;
     color:#660000
