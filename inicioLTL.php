@@ -36,6 +36,8 @@ function conexion(){
 //FUNCIÓN PARA VERIFICAR COINCIDENCIA DE USUARIO:
 function verificar($conexion, $usuario, $passw ){
     $datos=[];
+    $clave="";
+    $user1="";
     $consulta= $conexion->prepare("SELECT passw, usuario from usuarios where usuario=? or email=? ");
     $consulta->bind_param("ss", $usuario, $usuario);
     $consulta->execute();
