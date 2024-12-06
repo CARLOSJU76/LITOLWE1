@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/stylos_sidebar.css">
     <link rel="stylesheet" href="CSS/registro.css">
     <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/comentarios.css">
 
     <title> TOLIMA'S WRESTLING LEAGUE  </title>
 </head>
@@ -57,7 +58,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-2"  id="filas">
                 <div id="signup">
-                    <form name="sesion_off" id="sesion_off" class="formulario_sesion_activo">
+                    <form name="sesion_off" id="sesion_off" class="opciones_activas">
                         <select name="opcion_uno" id="opcion_uno" class="opciones_activas" >
                             <option value="3" disabled selected>Inicio/Registro</option>
                             <option value="1">Registrate</option>
@@ -65,7 +66,7 @@
                         </select>
                     </form>
                     <form name="sesion_on" id="sesion_on" class="opciones_inactivas">
-                        <select name="opcion_dos" id="opcion_dos" class="opciones_inactivas" >
+                        <select name="opcion_dos" id="sesion_on" class="opciones_activas" >
                             <option value="" disabled selected>Elige una opción</option>
                             <option value="1">Sumar</option>
                             <option value="2">Restar</option>
@@ -161,6 +162,23 @@
 <div id="mensaje_SIGNUP" class=""></div>
 <div id="saludoInicial" class=""></div>
 <div id="usuarioActual"></div>
+
+<!--SECCION DE LOS COMENTARIOS: =================================================================================================================== -->
+<!--Inserción de comentarios: --------------------------------------------->
+<div id="contenedor_comentarios">
+    <div id="encab_comentarios" class="caja">Comentarios de los Usuarios</div>
+    <div id="comments" class="caja" readonly></div>
+
+<!--Formulario para registrar comentarios:----------------------------------------------------------------------------------------------------------------------------------------------- -->
+   
+    <form id="RegistroComentarios" method="" class="caja" action="" >
+        <div type="text" id="autor" name="autor" class="caja"></div>
+        <textarea id="comentario1" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
+        <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Share a comment</button>
+    </form>
+  </div>
+<!-- ============================================================================================================================================== -->
+
 
     <script src="JS/slide.js"></script>
     <script src="JS/activo_inactivo.js"></script>

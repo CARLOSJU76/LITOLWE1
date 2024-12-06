@@ -63,7 +63,7 @@ body{
     transition: color 0.3s ease;
     cursor:pointer;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     background-color: transparent;
     color:#820000;
     border:none;
@@ -483,7 +483,7 @@ body{
     border: none;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     color:#660000
 }
 .opciones_inactivas{

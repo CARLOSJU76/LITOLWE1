@@ -47,10 +47,18 @@ function configInicio(){
     let ElUsuario= localStorage.getItem('ElUsuario');
     let usuarioActual= document.getElementById('usuarioActual');
         saludoInicial= document.getElementById('saludoInicial');
+        let sesion_off=document.getElementById('sesion_off');
+        let sesion_on=document.getElementById('sesion_on');
+    
     
 
     if(sesionActual=='true'){
         saludoInicial.innerHTML=  `Hola <span style="color: #4A0D0D; font-weight:bold; ">${ElUsuario}</span>, Estás en LitolWrestling Web!!`;  
+    
+   
+    sesion_on.className='opciones_activas';
+    sesion_off.className='opciones_inactivas';
+
     }
         
 

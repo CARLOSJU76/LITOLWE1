@@ -1,0 +1,45 @@
+html, body{
+    width: 100%;
+    height: 100;
+    padding: 100;
+    margin: 100;
+    
+}
+
+#contenedor_comentarios{    
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    aspect-ratio: 1.5;
+    bottom: 1%;
+    right: 1%;   
+    padding: 0;
+    background-color: white;
+    z-index: 3;
+
+}
+#RegistroComentarios{
+    display:flex;
+    flex-direction: column;
+    justify-items: space-between;
+    width: 100%;
+
+}
+.caja{
+    margin-bottom: 3px;
+    font-style: italic;
+    font-size:smaller;
+}
+#encab_comentarios{
+    position:fixed;
+    
+    background-color: orange;
+    width: 29.8%;
+    text-align: end;
+    border-radius: 4px;
+}
+/*#comentario1, #comentario2{
+    display:none;
+}
