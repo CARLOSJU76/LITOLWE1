@@ -66,12 +66,13 @@
                         </select>
                     </form>
                     <form name="sesion_on" id="sesion_on" class="opciones_inactivas">
-                        <select name="opcion_dos" id="sesion_on" class="opciones_activas" >
+                        <select name="action" id="deportista" class="opciones_activas" >
                             <option value="" disabled selected>Elige una opción</option>
                             <option value="1">Sumar</option>
                             <option value="2">Restar</option>
                             <option value="3">Multiplicar</option>
                             <option value="4">Dividir</option>
+                            <option value="5" onclick="cerrarSesion()" href="#" role="button">Salir</option>
                         </select>
                     </form>
                 </div>
@@ -80,10 +81,12 @@
 
 
     </div>
-
-
+    <!-- =============================ROTULO DE LA LIGA============================================================= -->
+    <div class="dorado"></div>
 
     <label id="liga">LIGA TOLIMENSE DE LUCHA OLIMPICA</label>
+    
+    <div class="dorado"></div>
 
     <!-- Sección de slider -->
      <!-- ========================================================================================= -->
@@ -105,6 +108,7 @@
         </div>
     </div>
 </div>
+
 <!-- FORMULARIO LOGIN -->
  <!-- ====================================================================================================================== -->
 <div id="contenedor_LOGIN" class="opciones_inactivas">
@@ -174,7 +178,7 @@
     <form id="RegistroComentarios" method="" class="caja" action="" >
         <div type="text" id="autor" name="autor" class="caja"></div>
         <textarea id="comentario1" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
-        <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Share a comment</button>
+        <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un comentario</button>
     </form>
   </div>
 <!-- ============================================================================================================================================== -->

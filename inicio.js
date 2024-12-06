@@ -59,7 +59,35 @@ function configInicio(){
     sesion_on.className='opciones_activas';
     sesion_off.className='opciones_inactivas';
 
+    }else{
+        sesion_on.className='opciones_inactivas';
+        sesion_off.className='opciones_activas';
     }
         
 
+}
+document.getElementById('deportista').addEventListener('change', function() {
+    const selectedValue = this.value;
+    
+    if (selectedValue === '5') {
+        // Si la opción "Salir" es seleccionada, realizar una petición para cerrar la sesión.
+        cerrarSesion();
+    }
+});
+function cerrarSesion() {
+    let ElUsuario= localStorage.getItem('ElUsuario');
+    fetch('logout.php')
+    .then(response => response.text())
+    .then(result => {
+        if (result === 'success') {
+            localStorage.removeItem('sesionIniciada'); // 
+            configInicio();
+            
+        }
+        mensajeLog.className='error';
+        mensajeLog.textContent= ElUsuario + ", acabaste de Cerrar la Sesión!!";
+        setTimeout(() =>{
+            location.reload();
+        }, 3000); 
+    });
 }

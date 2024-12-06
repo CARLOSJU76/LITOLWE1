@@ -8,16 +8,17 @@ html, body{
 
 #contenedor_comentarios{    
     position: fixed;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
-    aspect-ratio: 1.5;
+    aspect-ratio: 4;
     bottom: 1%;
     right: 1%;   
     padding: 0;
     background-color: white;
     z-index: 3;
+    border-radius: 7px;
 
 }
 #RegistroComentarios{
@@ -33,12 +34,20 @@ html, body{
     font-size:smaller;
 }
 #encab_comentarios{
-    position:fixed;
-    
-    background-color: orange;
-    width: 29.8%;
+    position:fixed;    
+    background-color: #820000 ;
+    width: 20%;
     text-align: end;
     border-radius: 4px;
+    color:white;
+    border: 1px solid #FFDF00;
+
+}
+#comments{
+    height: 60%;
+}
+#comentario2{
+    border-radius: 7px;
 }
 /*#comentario1, #comentario2{
     display:none;
