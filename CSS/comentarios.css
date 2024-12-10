@@ -63,7 +63,7 @@ html, body{
     background-color: orange;
     border-radius: 4px;
     border: none;
-    text-wrap-style: inherit;
+   font-style: italic;
     color:white;
 }
 /*#comentario1, #comentario2{

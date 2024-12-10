@@ -18,7 +18,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $consulta= "INSERT INTO comentarios(comentario, autor) VALUES ('$comentario', '$autor')";
 $stmt=$conexion->prepare($consulta);
-$stmt->execute();
 
 
 if($conexion->query($consulta)===true){
