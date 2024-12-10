@@ -175,8 +175,8 @@
 
 <!--Formulario para registrar comentarios:----------------------------------------------------------------------------------------------------------------------------------------------- -->
    
-    <form id="RegistroComentarios" method="" class="caja" action="" >
-        <div type="text" id="autor" name="autor" class="caja"></div>
+    <form id="RegistroComentarios" method="post" class="caja" action="insertComen.php">
+        <input type="text" id="autor" name="autor" class="caja"></input>
         <textarea id="comentario1" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
         <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un comentario</button>
     </form>
@@ -189,6 +189,7 @@
     <script src="registro.js"></script>
     <script src="inicio.js"></script>
     <script src="JS/bootstrap.bundle.js"></script>
+    <script src="comentarios.js"></script>
 </body>
 </html>
 

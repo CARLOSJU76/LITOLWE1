@@ -25,6 +25,7 @@ for_LOG.addEventListener('submit', function(event){
             localStorage.setItem('ElUsuario', nombreUsuario); 
                
             mensajeLog.className='success';
+     
            
              
         }else{         
@@ -44,9 +45,9 @@ configInicio();
 
 function configInicio(){
     let sesionActual= localStorage.getItem('sesionIniciada');
-    let ElUsuario= localStorage.getItem('ElUsuario');
-    let usuarioActual= document.getElementById('usuarioActual');
-        saludoInicial= document.getElementById('saludoInicial');
+    const ElUsuario= localStorage.getItem('ElUsuario');
+    let autor= document.getElementById('autor');
+    let saludoInicial= document.getElementById('saludoInicial');
         let sesion_off=document.getElementById('sesion_off');
         let sesion_on=document.getElementById('sesion_on');
     
@@ -54,11 +55,11 @@ function configInicio(){
 
     if(sesionActual=='true'){
         saludoInicial.innerHTML=  `Hola <span style="color: #4A0D0D; font-weight:bold; ">${ElUsuario}</span>, Estás en LitolWrestling Web!!`;  
-    
+        autor.value=ElUsuario;
    
     sesion_on.className='opciones_activas';
     sesion_off.className='opciones_inactivas';
-
+   
     }else{
         sesion_on.className='opciones_inactivas';
         sesion_off.className='opciones_activas';
@@ -66,6 +67,7 @@ function configInicio(){
         
 
 }
+//Función para cerrar valor al elegir la opción salir:
 document.getElementById('deportista').addEventListener('change', function() {
     const selectedValue = this.value;
     
