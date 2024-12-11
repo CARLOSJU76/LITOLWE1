@@ -52,6 +52,7 @@ html, body{
     color:gray;
     overflow: auto;
     border-radius: 5px;
+    font-style: italic;
 }
 #comentario2{
     border-radius: 7px;
@@ -63,7 +64,7 @@ html, body{
     background-color: orange;
     border-radius: 4px;
     border: none;
-   font-style: italic;
+    font-style: italic;
     color:white;
 }
 /*#comentario1, #comentario2{

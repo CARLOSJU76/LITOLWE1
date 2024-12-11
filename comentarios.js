@@ -11,20 +11,11 @@ function cargarComentarios() {
                 comentariosTexto += `${comentario.comentario}<br>`;
                 comentariosTexto += `<span style="font-size: 10px;">Fecha: ${comentario.fecha_hora}  <button class="like-button" data-id="${comentario.id}">Like</button> ${comentario.likes} likes <br></span>`;
             });
-
-            //comentariosTexto += `<span style="font-size: 10px;">Fecha: ${comentario.fecha}<br><button class="like-button" data-id="${comentario.id}">Like</button> ${comentario.likes} likes <br><br></span>`;
             
-        
-
             // Mostrar comentarios en el textarea
             document.getElementById('comments').innerHTML = comentariosTexto;
-            let liker= document.getElementById('autor').textContent;
+            const liker= localStorage.getItem('ElUsuario');
             
-           
-//Programando evento para los botones like--->
-//==========================================================================================
-          
-
             document.querySelectorAll('.like-button').forEach(button => {
                 button.addEventListener('click', function() {
                     // Obtener el valor del atributo data-id del botón clickeado
@@ -47,11 +38,43 @@ function cargarComentarios() {
 
                 });
             });
-            
+              
         })
         .catch(error => console.error('Error:', error));
+
 }
 window.onload = cargarComentarios;
+
+//Programando evento para los botones like--->
+//==========================================================================================
+//función para incrementar el númeo de likes:
+function incrementarLike(comentarioId,liker) {
+    sesionInciada= localStorage.getItem('sesionIniciada');
+
+    if(sesionInciada==='true'){
+        
+        const currentDate = new Date().toLocaleDateString('en-CA'); // Formato: YYYY-MM-DD
+        console.log(currentDate);
+        
+        return fetch('like.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: comentarioId, name:liker, currentDate:currentDate})
+        })
+        .then(response => response.json())
+        .then(result=>{
+            location.reload();
+            alert('Acabas de dar like ' + currentDate);
+            document.getElementById('comments').style.display="block";
+        })
+        .catch(error => console.error('Error:', error));
+
+    }else{
+        alert("Debes iniciar sesión para interactuar en los comentarios.");
+    }    
+}
 
 function recargarComen(){
     location.reload();
